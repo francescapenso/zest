@@ -1,0 +1,4 @@
+[submodule "stayted/DA-Odoo/MPFE-aged-account"]
+	path = stayted/DA-Odoo/MPFE-aged-account
+	url = git@github.com:stayted/DA-Odoo.git
+	branch = master
