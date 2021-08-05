@@ -2,3 +2,8 @@
 	path = stayted/DA-Odoo/MPFE-aged-account
 	url = git@github.com:stayted/DA-Odoo.git
 	branch = master
+
+[submodule "OCA/web"]
+	path = OCA/web
+	url = git@github.com:OCA/web.git
+	branch = 14.0
