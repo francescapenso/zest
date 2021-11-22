@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+
+    <record id="e_invoice_view_company_form" model="ir.ui.view">
+        <field name="name">res.company.e_invoice.form</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="E-Invoice Configuration">
+                    <group>
+                        <field name="afe_active"/>
+                        <field name="afe_api_url" required="1"/>
+                        <field name="afe_token" required="1"/>
+                        <field name="notify_users" widget="many2many_tags"/>
+                        <label for="afe_last_status_check"/>
+                        <div>
+                            <field name="afe_last_status_check" class="oe_inline"/>
+                            <button name="check_einvoice_status" string="Force Status Check" type="object"
+                                    class="oe_inline oe_link"/>
+                        </div>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</data>
+</odoo>

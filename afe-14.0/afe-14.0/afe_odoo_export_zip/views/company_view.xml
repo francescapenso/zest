@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+
+    <record id="afe_export_zip_e_invoice_view_company_form" model="ir.ui.view">
+        <field name="name">afe.export.zip.res.company.e_invoice.form</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="afe_odoo_connector.e_invoice_view_company_form"/>
+        <field name="arch" type="xml">
+            <field name="notify_mail" position="after">
+                <field name="afe_exported_zip_mail" required="1"/>
+            </field>
+        </field>
+    </record>
+
+</data>
+</odoo>

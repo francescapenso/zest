@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+
+    <record id="wizard_export_zip_from_einvoice_form_view" model="ir.ui.view">
+        <field name="name">Export XML as ZIP</field>
+        <field name="model">wizard.export.zip.from.einvoice</field>
+        <field name="arch" type="xml">
+            <form string="Export XML as ZIP" >
+                <group>
+                    <footer>
+                        <button special="cancel" string="Cancel"/>
+                        <button name="export_einvoice" string="Export" type="object"/>
+                    </footer>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <act_window name="Export XML as ZIP"
+        res_model="wizard.export.zip.from.einvoice"
+        src_model="afe.einvoice.in"
+        view_mode="form"
+        target="new"
+        key2="client_action_multi"
+        id="action_export_zip_afe_einvoice_in"
+        view_id="wizard_export_zip_from_einvoice_form_view"/>
+
+    <act_window name="Export XML as ZIP"
+        res_model="wizard.export.zip.from.einvoice"
+        src_model="account.invoice"
+        view_mode="form"
+        target="new"
+        key2="client_action_multi"
+        id="action_export_zip_account_invoice"
+        view_id="wizard_export_zip_from_einvoice_form_view"/>
+
+</data>
+</odoo>

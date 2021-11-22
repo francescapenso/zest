@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+
+    <record id="view_e-invoice_form" model="ir.ui.view">
+        <field name="name">view.e-invoice.form</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="l10n_it_fatturapa_out.view_invoice_form_fatturapa"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='fatturapa_attachment_out_id']/../.." position="after">
+                <group colspan="4">
+                    <field name="uuid_afe" groups="base.group_no_one"/>
+                    <field name="sdi_file_name" readonly="1"/>
+                    <field name="einvoice_pdf_file_name" invisible="1"/>
+                    <field name="einvoice_pdf_file" filename="einvoice_pdf_file_name"
+                           readonly="1"/>
+                    <field name="xml_p7m_file_name" invisible="1"/>
+                    <field name="xml_p7m_file" filename="xml_p7m_file_name" readonly="1"/>
+                    <field name="einvoice_state" groups="base.group_no_one"/>
+                    <field name="history_ftpa" readonly="1"/>
+                </group>
+                <group>
+                    <button name="check_einvoice_status" string="Force Status Check" type="object"/>
+                </group>
+                <group colspan="4">
+                    <field name="history_change"
+                        nolabel="1" readonly="0">
+                        <form string="History Change">
+                            <group>
+                                <field name="date"/>
+                                <field name="status_code" groups="base.group_no_one"/>
+                                <newline/>
+                                <field name="status_desc"/>
+                                <newline/>
+                                <field name="note"/>
+                                <newline/>
+                                <field name="xml_content"/>
+                                <newline/>
+                                <field name="uuid_afe" groups="base.group_no_one"/>
+                                <field name="type" groups="base.group_no_one"/>
+                            </group>
+                        </form>
+                        <tree string="History Change" decoration-danger="type == 'error'">
+                            <field name="date"/>
+                            <field name="status_code" groups="base.group_no_one"/>
+                            <field name="status_desc"/>
+                            <field name="note"/>
+                            <field name="uuid_afe" groups="base.group_no_one"/>
+                            <field name="type" groups="base.group_no_one"/>
+                        </tree>
+                    </field>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="button_afe_send_einvoice_form" model="ir.ui.view">
+        <field name="name">button.afe.send.einvoice.form</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header/button[1]" position="before">
+                <button name="%(afe_odoo_connector.action_send_e-invoice)d" string="Send E-Invoice"
+                        type="action" class="oe_highlight"
+                        attrs="{'invisible': ['|', ('einvoice_state', 'not in', ('draft', 'error')), ('state', '!=', 'posted')]}"
+                />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="afe_journal_einvoice_check_form" model="ir.ui.view">
+        <field name="name">afe.journal.einvoice.check.form</field>
+        <field name="model">account.journal</field>
+        <field name="inherit_id" ref="account.view_account_journal_form"/>
+        <field name="arch" type="xml">
+            <field name="code" position="after">
+                <field name="e_invoice"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="afe_state_send_einvoice_form" model="ir.ui.view">
+        <field name="name">afe.state.send.einvoice.form</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet/div[@name='button_box']" position="inside">
+                <field name="state_led" invisible="1"/>
+                <button name="view_preview_invoice_file" type="object" class="oe_stat_button" icon="fa-paper-plane"
+                    string="Sent" attrs="{'invisible': [('state_led', '=', False)]}" style="color: green"/>
+                <button name="view_preview_invoice_file" type="object" class="oe_stat_button" icon="fa-paper-plane"
+                    string="Not Sent" attrs="{'invisible': [('state_led', '=', True)]}" style="color: red"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="afe_einvoice_state_tree" model="ir.ui.view">
+        <field name="name">afe-einvoice.state.tree</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_out_invoice_tree"/>
+        <field name="arch" type="xml">
+            <field name="state" position="after">
+                <field name="einvoice_state" widget="badge" decoration-success="einvoice_state == 'sent'" 
+                decoration-primary="einvoice_state == 'sending'" decoration-danger="einvoice_state == 'error'" 
+                decoration-info="einvoice_state == 'draft'"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="afe_einvoice_dashboard_account_kanban" model="ir.ui.view">
+        <field name="name">afe.einvoice.dashboard.account.kanban</field>
+        <field name="model">account.journal</field>
+        <field name="inherit_id" ref="account.account_journal_dashboard_kanban_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//t[@t-name='JournalBodySalePurchase']/div[2]" position="inside">
+                <div class="row" t-if="dashboard.number_einvoice_error">
+                    <div class="col overflow-hidden text-left">
+                        <a type="object" name="open_action" context="{'search_default_e_error': '1'}">
+                            <span style="color: red" t-if="journal_type == 'sale'" title="E-invoice in error"><t t-esc="dashboard.number_einvoice_error"/> E-invoice in error</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="row" t-if="dashboard.number_einvoice_draft">
+                    <div class="col overflow-hidden text-left">
+                        <a type="object" name="open_action" context="{'search_default_posted': '1', 'search_default_e_draft': '1'}">
+                            <span style="color: green" t-if="journal_type == 'sale'" title="Invoice to Sent"><t t-esc="dashboard.number_einvoice_draft"/> Invoice to Sent</span>
+                        </a>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="afe_einvoice_state_tree_search" model="ir.ui.view">
+        <field name="name">afe.einvoice.state.tree.search</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_account_invoice_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//separator[1]" position="after">
+                <filter name="e_draft" string="EI Draft" domain="[('einvoice_state', '=', 'draft')]"/>
+                <filter name="e_sending" string="EI Sending" domain="[('einvoice_state', '=', 'sending')]"/>
+                <filter name="e_sent" string="EI Sent" domain="[('einvoice_state', '=', 'sent')]"/>
+                <filter name="e_error" string="EI Error" domain="[('einvoice_state', '=', 'error')]"/>
+                <filter name="e_done" string="EI Complete" domain="[('einvoice_state', '=', 'done')]"/>
+                <separator/>
+            </xpath>
+            <xpath expr="//group[1]" position="inside">
+                <filter name="e_invoice_state" string="E-Invoice State" context="{'group_by': 'einvoice_state'}"/>
+                <separator/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="afe_invoice_in_fatturapa_attachment_inherit" model="ir.ui.view">
+        <field name="name">afe.invoice.in.fatturapa.attachment.inherit</field>
+        <field name="model">fatturapa.attachment.in</field>
+        <field name="inherit_id" ref="l10n_it_fatturapa_in.view_fatturapa_in_attachment_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form/div[1]" position="after">
+                <div attrs="{'invisible':['|', ('xml_supplier_id', '!=', False),('datas', '=', False)]}">
+                        <div class="alert alert-warning" role="alert">Fornitore non presente o multiplo</div>
+                </div>
+            </xpath>
+            <field name="xml_supplier_id" position="after">
+                <field name="supp_number"/>
+                <field name="uuid_afe" readonly="1"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="afe_invoice_in_fatturapa_attachment_tree_inherit" model="ir.ui.view">
+        <field name="name">afe.invoice.in.fatturapa.attachment.tree_inherit</field>
+        <field name="model">fatturapa.attachment.in</field>
+        <field name="inherit_id" ref="l10n_it_fatturapa_in.view_fatturapa_in_attachment_tree"/>
+        <field name="arch" type="xml">
+            <field name="invoices_date" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+            <field name="invoices_date" position="after">
+                <field name="date_in_invoice" readonly="1"/>
+            </field>
+        </field>
+    </record>
+
+</data>
+</odoo>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+
+    <record id="view_account_invoice_afe_export_zip_form" model="ir.ui.view">
+        <field name="name">view.account.invoice.afe.export.zip.form</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="afe_odoo_connector.view_e-invoice_form"/>
+        <field name="arch" type="xml">
+            <field name="einvoice_state" position="after">
+                <field name="einvoice_export_state" />
+                <field name="afe_export_zip_id" readonly="1"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="export_zip_afe_einvoice_state_tree" model="ir.ui.view">
+        <field name="name">export.zip.account.invoice.state.tree</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="afe_odoo_connector.afe_einvoice_state_tree"/>
+        <field name="arch" type="xml">
+            <field name="einvoice_state" position="after">
+                <field name="einvoice_export_state"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="export_zip_afe_einvoice_state_tree_search" model="ir.ui.view">
+        <field name="name">export.zip.afe.einvoice.state.tree.search</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="afe_odoo_connector.afe_einvoice_state_tree_search"/>
+        <field name="arch" type="xml">
+            <filter name="e_draft" position="after">
+                <filter string="Not Exported" name="filter_not_exported"
+                        domain="[('einvoice_export_state', '=', 'not_exported')]"/>
+                <filter string="To Export" name="filter_to_export"
+                        domain="[('einvoice_export_state', '=', 'to_export')]"/>
+                <filter string="Exported" name="filter_exported"
+                        domain="[('einvoice_export_state', '=', 'exported')]"/>
+            </filter>
+        </field>
+    </record>
+
+    <record id="export_zip_afe_einvoice_in_form" model="ir.ui.view">
+        <field name="name">export.zip.afe.einvoice.in.form</field>
+        <field name="model">afe.einvoice.in</field>
+        <field name="inherit_id" ref="afe_odoo_connector.afe_einvoice_in_form"/>
+        <field name="arch" type="xml">
+            <field name="purchase_invoice_id" position="after">
+                <field name="einvoice_export_state" />
+                <field name="afe_export_zip_id" readonly="1"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="export_zip_afe_einvoice_in_tree" model="ir.ui.view">
+        <field name="name">export.zip.afe.einvoice.in.tree</field>
+        <field name="model">afe.einvoice.in</field>
+        <field name="inherit_id" ref="afe_odoo_connector.afe_einvoice_in_tree"/>
+        <field name="arch" type="xml">
+            <field name="purchase_invoice_id" position="after">
+                <field name="einvoice_export_state" />
+            </field>
+        </field>
+    </record>
+
+    <record id="export_zip_afe_einvoice_in_search" model="ir.ui.view">
+        <field name="name">export.zip.afe.einvoice.in.search</field>
+        <field name="model">afe.einvoice.in</field>
+        <field name="inherit_id" ref="afe_odoo_connector.afe_einvoice_in_search"/>
+        <field name="arch" type="xml">
+            <filter name="filter_no_match" position="after">
+                <filter string="Not Exported" name="filter_not_exported"
+                        domain="[('einvoice_export_state', '=', 'not_exported')]"/>
+                <filter string="To Export" name="filter_to_export"
+                        domain="[('einvoice_export_state', '=', 'to_export')]"/>
+                <filter string="Exported" name="filter_exported"
+                        domain="[('einvoice_export_state', '=', 'exported')]"/>
+            </filter>
+        </field>
+    </record>
+
+    <record id="afe_invoice_export_zip_form" model="ir.ui.view">
+        <field name="name">afe.invoice.export.zip.form</field>
+        <field name="model">afe.invoice.export.zip</field>
+        <field name="arch" type="xml">
+            <form string="Export ZIP" create="0" edit="0">
+                <header>
+                    <button name="set_to_resend" type="object" string="Resend" />
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <label for="zip_file_name" class="oe_edit_only"/>
+                    <div>
+                      <h2><field name="zip_file_name" readonly="1"/></h2>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="attachment_id" readonly="1"/>
+                            <field name="invoices_type" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="date" readonly="1"/>
+                            <field name="company_id" readonly="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="in_invoices" string="Suppliers Invoices"
+                              attrs="{'invisible': [('invoices_type', '!=', 'in')]}">
+                            <field name="in_invoices_ids" readonly="1" nolabel="0"/>
+                        </page>
+                        <page name="out_invoices" string="Customers Invoices"
+                              attrs="{'invisible': [('invoices_type', '!=', 'out')]}">
+                            <field name="out_invoices_ids" readonly="1" nolabel="0"/>
+                        </page>
+                        <page name="mail_sendings" string="Mail Sendings">
+                            <field name="mail_sending_ids" readonly="1" nolabel="1"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="afe_invoice_export_zip_tree" model="ir.ui.view">
+        <field name="name">afe.invoice.export.zip.tree</field>
+        <field name="model">afe.invoice.export.zip</field>
+        <field name="arch" type="xml">
+            <tree string="Export ZIP" create="0" edit="0">
+                <field name="invoices_type"/>
+                <field name="zip_file_name"/>
+                <field name="company_id"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="afe_invoice_export_zip_search" model="ir.ui.view">
+        <field name="name">afe.invoice.export.zip.search</field>
+        <field name="model">afe.invoice.export.zip</field>
+        <field name="arch" type="xml">
+            <search string="Export ZIP">
+                <field name="invoices_type"/>
+                <field name="zip_file_name"/>
+                <field name="company_id"/>
+                <field name="state"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="afe_invoice_export_zip_action" model="ir.actions.act_window">
+        <field name="name">Export ZIP</field>
+        <field name="res_model">afe.invoice.export.zip</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="afe_invoice_export_zip_menu" action="afe_invoice_export_zip_action"
+              parent="account.menu_finance_entries" sequence="20" />
+
+</data>
+</odoo>

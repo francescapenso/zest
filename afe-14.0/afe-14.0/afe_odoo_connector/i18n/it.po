@@ -1,0 +1,621 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* afe_odoo_connector
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0-20210130\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-06 14:31+0000\n"
+"PO-Revision-Date: 2021-05-06 14:31+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: afe_odoo_connector
+#: code:addons/afe_odoo_connector/models/account.py:0
+#, python-format
+msgid ""
+"\n"
+"        You have a new invoice incoming number {n}!\n"
+"        The new invoice it was stored in your system with file name {f}\n"
+"        "
+msgstr ""
+"\n"
+"        Hai ricevuto un nuova fattura elettronica fornitore {n}!\n"
+"        La nuova fattura è stata salvata nel sistema con il file {f}\n"
+"        "
+
+#. module: afe_odoo_connector
+#: code:addons/afe_odoo_connector/models/account.py:0
+#, python-format
+msgid ""
+"\n"
+"        You have an error on invoice number {n}!\n"
+"        View history status of invoice to have more information.\n"
+"        "
+msgstr ""
+"\n"
+"        Errore sulla fattura elettronica {n}!\n"
+"        Accedi alla fattura e consulta lo storico degli stati per maggiori info.\n"
+"        "
+
+#. module: afe_odoo_connector
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_res_company__afe_active
+msgid "Afe Active"
+msgstr "Attivazione AFE"
+
+#. module: afe_odoo_connector
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_res_company__afe_api_url
+msgid "Afe Api Url"
+msgstr "Url API Afe"
+
+#. module: afe_odoo_connector
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_res_company__afe_last_status_check
+msgid "Afe Last Status Check"
+msgstr "AFE - Ultimo check stati"
+
+#. module: afe_odoo_connector
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_res_company__afe_token
+msgid "Afe Token"
+msgstr "Token AFE"
+
+#. module: afe_odoo_connector
+#: code:addons/afe_odoo_connector/models/account.py:0
+#, python-format
+msgid "Can't not cancel sent invoice"
+msgstr "Non è possibile annullare fatture inviate se non sono in errore"
+
+#. module: afe_odoo_connector
+#: model_terms:ir.ui.view,arch_db:afe_odoo_connector.wizard_send_einvoice
+msgid "Cancel"
+msgstr "Annulla"
+
+#. module: afe_odoo_connector
+#: model:ir.model.fields,help:afe_odoo_connector.field_account_journal__e_invoice
+msgid ""
+"Check this box to determine that each entry of this journalwill be managed "
+"with Italian Electronical Invoice."
+msgstr "Selezionare questa casella per determinare che ogni voce di questo registro verrà gestita "
+"con Fattura Elettronica Italiana."
+
+#. module: afe_odoo_connector
+#: model:ir.model,name:afe_odoo_connector.model_res_company
+msgid "Companies"
+msgstr "Aziende"
+
+#. module: afe_odoo_connector
+#: model:ir.model.fields.selection,name:afe_odoo_connector.selection__account_move__einvoice_state__done
+msgid "Complete"
+msgstr "Completa"
+
+#. module: afe_odoo_connector
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_einvoice_history__create_uid
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_wizard_send_invoice__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: afe_odoo_connector
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_einvoice_history__create_date
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_wizard_send_invoice__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: afe_odoo_connector
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_einvoice_history__date
+msgid "Date Action"
+msgstr "Data Azione"
+
+#. module: afe_odoo_connector
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_fatturapa_attachment_in__date_in_invoice
+msgid "Date In Invoice"
+msgstr "Data Fattura"
+
+#. module: afe_odoo_connector
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_account_journal__display_name
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_account_move__display_name
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_einvoice_history__display_name
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_fatturapa_attachment_in__display_name
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_fatturapa_attachment_out__display_name
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_res_company__display_name
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_wizard_send_invoice__display_name
+msgid "Display Name"
+msgstr "Nome visualizzato"
+
+#. module: afe_odoo_connector
+#: code:addons/afe_odoo_connector/models/account.py:0
+#: code:addons/afe_odoo_connector/models/account.py:0
+#, python-format
+msgid ""
+"Download File:\n"
+"{c}.\n"
+"{t}"
+msgstr ""
+"Download File:\n"
+"{c}.\n"
+"{t}"
+
+#. module: afe_odoo_connector
+#: model:ir.model.fields.selection,name:afe_odoo_connector.selection__account_move__einvoice_state__draft
+msgid "Draft"
+msgstr "Bozza"
+
+#. module: afe_odoo_connector
+#: model:ir.actions.server,name:afe_odoo_connector.ir_cron_check_new_status_ir_actions_server
+#: model:ir.cron,cron_name:afe_odoo_connector.ir_cron_check_new_status
+#: model:ir.cron,name:afe_odoo_connector.ir_cron_check_new_status
+msgid "E-Invoice - Check New Status"
+msgstr ""
+
+#. module: afe_odoo_connector
+#: model:ir.actions.server,name:afe_odoo_connector.ir_cron_complete_einvoice_ir_actions_server
+#: model:ir.cron,cron_name:afe_odoo_connector.ir_cron_complete_einvoice
+#: model:ir.cron,name:afe_odoo_connector.ir_cron_complete_einvoice
+msgid "E-Invoice - Complete"
+msgstr ""
+
+#. module: afe_odoo_connector
+#: model:ir.actions.server,name:afe_odoo_connector.ir_cron_get_incoming_invoice_fai_ir_actions_server
+#: model:ir.cron,cron_name:afe_odoo_connector.ir_cron_get_incoming_invoice_fai
+#: model:ir.cron,name:afe_odoo_connector.ir_cron_get_incoming_invoice_fai
+msgid "E-Invoice - Get Incoming Invoice XML FAI"
+msgstr ""
+
+#. module: afe_odoo_connector
+#: model:ir.actions.server,name:afe_odoo_connector.ir_cron_send_einvoice_ir_actions_server
+#: model:ir.cron,cron_name:afe_odoo_connector.ir_cron_send_einvoice
+#: model:ir.cron,name:afe_odoo_connector.ir_cron_send_einvoice
+msgid "E-Invoice - Send"
+msgstr ""
+
+#. module: afe_odoo_connector
+#: model_terms:ir.ui.view,arch_db:afe_odoo_connector.e_invoice_view_company_form
+msgid "E-Invoice Configuration"
+msgstr ""
+
+#. module: afe_odoo_connector
+#: model:res.groups,name:afe_odoo_connector.e_invoice_manager
+msgid "E-Invoice Manager"
+msgstr "AFE - Manager Fattura Elettronica"
+
+#. module: afe_odoo_connector
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_account_bank_statement_line__einvoice_state
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_account_move__einvoice_state
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_account_payment__einvoice_state
+#: model_terms:ir.ui.view,arch_db:afe_odoo_connector.afe_einvoice_state_tree_search
+msgid "E-Invoice State"
+msgstr "Stato Fattura Elettronica"
+
+#. module: afe_odoo_connector
+#: model:res.groups,name:afe_odoo_connector.e_invoice_user
+msgid "E-Invoice User"
+msgstr "AFE - Utente Fattura Elettronica"
+
+#. module: afe_odoo_connector
+#: model:ir.model,name:afe_odoo_connector.model_fatturapa_attachment_in
+msgid "E-bill import file"
+msgstr "File importato e-fattura"
+
+#. module: afe_odoo_connector
+#: model:ir.model,name:afe_odoo_connector.model_fatturapa_attachment_out
+msgid "E-invoice Export File"
+msgstr "File esportato e-fattura"
+
+#. module: afe_odoo_connector
+#: model_terms:ir.ui.view,arch_db:afe_odoo_connector.afe_einvoice_dashboard_account_kanban
+msgid "E-invoice in error"
+msgstr "Fatture Elettroniche in errore"
+
+#. module: afe_odoo_connector
+#: model_terms:ir.ui.view,arch_db:afe_odoo_connector.afe_einvoice_state_tree_search
+msgid "EI Complete"
+msgstr "FE Complete"
+
+#. module: afe_odoo_connector
+#: model_terms:ir.ui.view,arch_db:afe_odoo_connector.afe_einvoice_state_tree_search
+msgid "EI Draft"
+msgstr "FE Non Inviate"
+
+#. module: afe_odoo_connector
+#: model_terms:ir.ui.view,arch_db:afe_odoo_connector.afe_einvoice_state_tree_search
+msgid "EI Error"
+msgstr "FE Errore"
+
+#. module: afe_odoo_connector
+#: model_terms:ir.ui.view,arch_db:afe_odoo_connector.afe_einvoice_state_tree_search
+msgid "EI Sending"
+msgstr "FE In Invio"
+
+#. module: afe_odoo_connector
+#: model_terms:ir.ui.view,arch_db:afe_odoo_connector.afe_einvoice_state_tree_search
+msgid "EI Sent"
+msgstr "FE Inviate"
+
+#. module: afe_odoo_connector
+#: model:ir.model.fields.selection,name:afe_odoo_connector.selection__einvoice_history__type__error
+msgid "ERROR"
+msgstr "ERRORE"
+
+#. module: afe_odoo_connector
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_account_bank_statement_line__einvoice_pdf_file
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_account_move__einvoice_pdf_file
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_account_payment__einvoice_pdf_file
+msgid "Einvoice Pdf File"
+msgstr "File PDF fattura elettronica"
+
+#. module: afe_odoo_connector
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_account_bank_statement_line__einvoice_pdf_file_name
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_account_move__einvoice_pdf_file_name
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_account_payment__einvoice_pdf_file_name
+msgid "Einvoice Pdf File Name"
+msgstr "Nome file PDF fattura elettronica"
+
+#. module: afe_odoo_connector
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_account_journal__e_invoice
+msgid "Electronic Invoice"
+msgstr "Fattura Elettronica"
+
+#. module: afe_odoo_connector
+#: model:ir.model.fields.selection,name:afe_odoo_connector.selection__account_move__einvoice_state__error
+msgid "Error"
+msgstr "Errore"
+
+#. module: afe_odoo_connector
+#: code:addons/afe_odoo_connector/models/account.py:0
+#, python-format
+msgid "Error Invoice Status {}"
+msgstr "Stato Errore Fattura {}"
+
+#. module: afe_odoo_connector
+#: code:addons/afe_odoo_connector/afe.py:0
+#: code:addons/afe_odoo_connector/afe.py:0
+#, python-format
+msgid ""
+"Error in application of XLS %s to XML file %s\n"
+"\n"
+"%s"
+msgstr ""
+"Errore nell'applicazione di XLS %s al file XML %s\n"
+"\n"
+"%s"
+
+#. module: afe_odoo_connector
+#: code:addons/afe_odoo_connector/afe.py:0
+#, python-format
+msgid "Error in extraction of XML from P7M file %s"
+msgstr "Errore nell'estrazione di XML da P7M %s"
+
+#. module: afe_odoo_connector
+#: code:addons/afe_odoo_connector/wizard/wizard_send_invoice.py:0
+#, python-format
+msgid ""
+"Error in invoice %s:\n"
+"\n"
+"%s"
+msgstr ""
+"Errore nella fattura %s:\n"
+"\n"
+"%s"
+
+#. module: afe_odoo_connector
+#: model_terms:ir.ui.view,arch_db:afe_odoo_connector.e_invoice_view_company_form
+#: model_terms:ir.ui.view,arch_db:afe_odoo_connector.view_e-invoice_form
+msgid "Force Status Check"
+msgstr "Forza Check Stati"
+
+#. module: afe_odoo_connector
+#: model_terms:ir.ui.view,arch_db:afe_odoo_connector.afe_invoice_in_fatturapa_attachment_inherit
+msgid "Fornitore non presente o multiplo"
+msgstr "Fornitore non presente o multiplo"
+
+#. module: afe_odoo_connector
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_account_bank_statement_line__history_change
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_account_move__history_change
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_account_payment__history_change
+msgid "Historic Change"
+msgstr "Storico Cambiamenti"
+
+#. module: afe_odoo_connector
+#: model_terms:ir.ui.view,arch_db:afe_odoo_connector.view_e-invoice_form
+msgid "History Change"
+msgstr "Storico Cambiamenti"
+
+#. module: afe_odoo_connector
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_account_journal__id
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_account_move__id
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_einvoice_history__id
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_fatturapa_attachment_in__id
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_fatturapa_attachment_out__id
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_res_company__id
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_wizard_send_invoice__id
+msgid "ID"
+msgstr ""
+
+#. module: afe_odoo_connector
+#: code:addons/afe_odoo_connector/models/account.py:0
+#, python-format
+msgid ""
+"Invoice In:\n"
+"{c}.\n"
+"{t}"
+msgstr ""
+"Fattura Fornitore:\n"
+"{c}.\n"
+"{t}"
+
+#. module: afe_odoo_connector
+#: model_terms:ir.ui.view,arch_db:afe_odoo_connector.afe_einvoice_dashboard_account_kanban
+msgid "Invoice to Sent"
+msgstr "Fatture Elettroniche da inviare"
+
+#. module: afe_odoo_connector
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_fatturapa_attachment_in__invoices_date
+msgid "Invoices date"
+msgstr "Data fatture"
+
+#. module: afe_odoo_connector
+#: model:ir.model,name:afe_odoo_connector.model_account_journal
+msgid "Journal"
+msgstr "Registro"
+
+#. module: afe_odoo_connector
+#: model:ir.model,name:afe_odoo_connector.model_account_move
+msgid "Journal Entry"
+msgstr "Registrazione contabile"
+
+#. module: afe_odoo_connector
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_account_journal____last_update
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_account_move____last_update
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_einvoice_history____last_update
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_fatturapa_attachment_in____last_update
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_fatturapa_attachment_out____last_update
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_res_company____last_update
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_wizard_send_invoice____last_update
+msgid "Last Modified on"
+msgstr "Ultima modifica il"
+
+#. module: afe_odoo_connector
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_einvoice_history__write_uid
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_wizard_send_invoice__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: afe_odoo_connector
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_einvoice_history__write_date
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_wizard_send_invoice__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: afe_odoo_connector
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_einvoice_history__name
+msgid "Name"
+msgstr "Nome"
+
+#. module: afe_odoo_connector
+#: code:addons/afe_odoo_connector/models/account.py:0
+#, python-format
+msgid "New Invoice Incoming {}"
+msgstr "Nuova Fattura Elettronica Ricevuta {}"
+
+#. module: afe_odoo_connector
+#: model_terms:ir.ui.view,arch_db:afe_odoo_connector.afe_state_send_einvoice_form
+msgid "Not Sent"
+msgstr "Non Inviata"
+
+#. module: afe_odoo_connector
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_einvoice_history__note
+msgid "Note"
+msgstr "Nota"
+
+#. module: afe_odoo_connector
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_fatturapa_attachment_out__fatturapa_notes
+msgid "Notes"
+msgstr "Note"
+
+#. module: afe_odoo_connector
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_res_company__notify_mail
+msgid "Notify Mail"
+msgstr "Mail per notifiche"
+
+#. module: afe_odoo_connector
+#: model:ir.model.fields.selection,name:afe_odoo_connector.selection__einvoice_history__type__positive
+msgid "OK"
+msgstr "OK"
+
+#. module: afe_odoo_connector
+#: code:addons/afe_odoo_connector/wizard/wizard_send_invoice.py:0
+#, python-format
+msgid "Partner is not electronic invoice subjected"
+msgstr "Il cliente non è soggetto a fatturazione elettronica"
+
+#. module: afe_odoo_connector
+#: code:addons/afe_odoo_connector/models/account.py:0
+#: code:addons/afe_odoo_connector/models/account.py:0
+#, python-format
+msgid ""
+"Remote File:\n"
+"{c}.\n"
+"{t}"
+msgstr ""
+
+#. module: afe_odoo_connector
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_account_bank_statement_line__sdi_file_name
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_account_move__sdi_file_name
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_account_payment__sdi_file_name
+msgid "Sdi File Name"
+msgstr "Nome file SDI"
+
+#. module: afe_odoo_connector
+#: code:addons/afe_odoo_connector/wizard/wizard_send_invoice.py:0
+#, python-format
+msgid ""
+"Selected journal is incorrect.\n"
+"Is not E-invoice"
+msgstr "Il registro selezionato è errato.\n"
+"Non è abilitato alla fatturazione elettronica"
+
+#. module: afe_odoo_connector
+#: model:ir.actions.act_window,name:afe_odoo_connector.action_send_e-invoice
+#: model_terms:ir.ui.view,arch_db:afe_odoo_connector.button_afe_send_einvoice_form
+msgid "Send E-Invoice"
+msgstr "Invia Fattura Elettronica"
+
+#. module: afe_odoo_connector
+#: model_terms:ir.ui.view,arch_db:afe_odoo_connector.wizard_send_einvoice
+msgid "Send Invoice"
+msgstr "Invia Fattura"
+
+#. module: afe_odoo_connector
+#: model_terms:ir.ui.view,arch_db:afe_odoo_connector.wizard_send_einvoice
+msgid "Sendig of E-Invoice"
+msgstr "Invio della Fattura Elettronica"
+
+#. module: afe_odoo_connector
+#: model:ir.model.fields.selection,name:afe_odoo_connector.selection__account_move__einvoice_state__sending
+msgid "Sending"
+msgstr "Invio"
+
+#. module: afe_odoo_connector
+#: model:ir.model.fields.selection,name:afe_odoo_connector.selection__account_move__einvoice_state__sent
+#: model_terms:ir.ui.view,arch_db:afe_odoo_connector.afe_state_send_einvoice_form
+msgid "Sent"
+msgstr "Inviata"
+
+#. module: afe_odoo_connector
+#: code:addons/afe_odoo_connector/afe.py:0
+#, python-format
+msgid ""
+"Server Error\n"
+"Sorry! Operation error!\n"
+"Please try later\n"
+"%s"
+msgstr ""
+"Errore Server\n"
+"Ci scusiamo! Errore dell'operazione!\n"
+"Riprova più tardi\n"
+"%s"
+
+#. module: afe_odoo_connector
+#: code:addons/afe_odoo_connector/afe.py:0
+#, python-format
+msgid ""
+"Server Unreachable\n"
+"Please try later"
+msgstr ""
+"Server Irraggiungibile\n"
+"Provare di nuovo per favore"
+
+#. module: afe_odoo_connector
+#: code:addons/afe_odoo_connector/models/account.py:0
+#: code:addons/afe_odoo_connector/models/account.py:0
+#, python-format
+msgid "Set an email for notify in company configuration"
+msgstr "Impostare una email di notifica nelle configurazioni AFE aziendali"
+
+#. module: afe_odoo_connector
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_account_bank_statement_line__state_led
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_account_move__state_led
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_account_payment__state_led
+msgid "State Led"
+msgstr ""
+
+#. module: afe_odoo_connector
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_einvoice_history__status_code
+msgid "Status Code"
+msgstr "Codice Stato"
+
+#. module: afe_odoo_connector
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_einvoice_history__status_desc
+msgid "Status Desc"
+msgstr "Desc Stato"
+
+#. module: afe_odoo_connector
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_account_bank_statement_line__history_ftpa
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_account_move__history_ftpa
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_account_payment__history_ftpa
+msgid "Storico Trasmissione"
+msgstr "Storico Trasmissione"
+
+#. module: afe_odoo_connector
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_fatturapa_attachment_in__supp_number
+msgid "Supp Number"
+msgstr "protocollo fornitore"
+
+#. module: afe_odoo_connector
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_einvoice_history__type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: afe_odoo_connector
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_account_bank_statement_line__uuid_afe
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_account_move__uuid_afe
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_account_payment__uuid_afe
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_einvoice_history__uuid_afe
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_fatturapa_attachment_in__uuid_afe
+msgid "Uuid Afe"
+msgstr "Uuid Afe"
+
+#. module: afe_odoo_connector
+#: model:ir.model,name:afe_odoo_connector.model_wizard_send_invoice
+msgid "Wizard For Sending E-Invoice"
+msgstr "Wizard per invio Fatture Elettroniche"
+
+#. module: afe_odoo_connector
+#: code:addons/afe_odoo_connector/wizard/wizard_send_invoice.py:0
+#, python-format
+msgid "XML is not ready"
+msgstr "XML non pronto"
+
+#. module: afe_odoo_connector
+#: code:addons/afe_odoo_connector/afe.py:0
+#, python-format
+msgid "XML not extracted from P7M file %s"
+msgstr "XML non estratto da P7M %s"
+
+#. module: afe_odoo_connector
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_einvoice_history__xml_content
+msgid "Xml Content"
+msgstr "Contenuto XML"
+
+#. module: afe_odoo_connector
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_account_bank_statement_line__xml_p7m_file
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_account_move__xml_p7m_file
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_account_payment__xml_p7m_file
+msgid "Xml P7M File"
+msgstr "File Xml P7M"
+
+#. module: afe_odoo_connector
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_account_bank_statement_line__xml_p7m_file_name
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_account_move__xml_p7m_file_name
+#: model:ir.model.fields,field_description:afe_odoo_connector.field_account_payment__xml_p7m_file_name
+msgid "Xml P7M File Name"
+msgstr "Nome File Xml P7M"
+
+#. module: afe_odoo_connector
+#: model:ir.model,name:afe_odoo_connector.model_einvoice_history
+msgid "einvoice.history"
+msgstr ""
+
+#. module: afe_odoo_connector
+#: code:addons/afe_odoo_connector/wizard/wizard_send_invoice.py:0
+#, python-format
+msgid "has already been processed"
+msgstr "è stato già processato"
+
+#. module: afe_odoo_connector
+#: code:addons/afe_odoo_connector/wizard/wizard_send_invoice.py:0
+#, python-format
+msgid "is not validate"
+msgstr "non è validato"
+
+#. module: afe_odoo_connector
+#: code:addons/afe_odoo_connector/models/account.py:0
+#: code:addons/afe_odoo_connector/models/account.py:0
+#, python-format
+msgid ""
+"{c}.\n"
+"{t}"
+msgstr ""

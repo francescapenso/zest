@@ -1,0 +1,246 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* afe_odoo_export_zip
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-05 15:26+0000\n"
+"PO-Revision-Date: 2019-03-05 15:26+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: afe_odoo_export_zip
+#: code:addons/afe_odoo_export_zip/models/account.py:121
+#, python-format
+msgid "\n"
+"            {company} sents a ZIP file with XML of invoices inside\n"
+"            "
+msgstr "\n"
+"            {company} ha inviato un pacchetto ZIP contenente i file XML delle fatture\n"
+"            "
+
+#. module: afe_odoo_export_zip
+#: model:ir.model.fields,field_description:afe_odoo_export_zip.field_res_company_afe_exported_zip_mail
+msgid "Afe exported zip mail"
+msgstr "Mail Invio ZIP esportazione"
+
+#. module: afe_odoo_export_zip
+#: model:ir.model.fields,field_description:afe_odoo_export_zip.field_afe_invoice_export_zip_attachment_id
+msgid "Attachment"
+msgstr "Allegato"
+
+#. module: afe_odoo_export_zip
+#: model:ir.ui.view,arch_db:afe_odoo_export_zip.wizard_export_zip_from_einvoice_form_view
+msgid "Cancel"
+msgstr "Annulla"
+
+#. module: afe_odoo_export_zip
+#: model:ir.model,name:afe_odoo_export_zip.model_res_company
+msgid "Companies"
+msgstr "Aziende"
+
+#. module: afe_odoo_export_zip
+#: model:ir.model.fields,field_description:afe_odoo_export_zip.field_afe_invoice_export_zip_company_id
+msgid "Company"
+msgstr "Azienda"
+
+#. module: afe_odoo_export_zip
+#: model:ir.model.fields,field_description:afe_odoo_export_zip.field_afe_invoice_export_zip_create_uid
+#: model:ir.model.fields,field_description:afe_odoo_export_zip.field_wizard_export_zip_from_einvoice_create_uid
+msgid "Created by"
+msgstr "Creato da"
+
+#. module: afe_odoo_export_zip
+#: model:ir.model.fields,field_description:afe_odoo_export_zip.field_afe_invoice_export_zip_create_date
+#: model:ir.model.fields,field_description:afe_odoo_export_zip.field_wizard_export_zip_from_einvoice_create_date
+msgid "Created on"
+msgstr "Creato il"
+
+#. module: afe_odoo_export_zip
+#: selection:afe.invoice.export.zip,invoices_type:0
+#: model:ir.model.fields,field_description:afe_odoo_export_zip.field_afe_invoice_export_zip_out_invoices_ids
+#: model:ir.ui.view,arch_db:afe_odoo_export_zip.afe_invoice_export_zip_form
+msgid "Customers Invoices"
+msgstr "Fatture Clienti"
+
+#. module: afe_odoo_export_zip
+#: model:ir.model.fields,field_description:afe_odoo_export_zip.field_afe_invoice_export_zip_date
+msgid "Date"
+msgstr "Data"
+
+#. module: afe_odoo_export_zip
+#: model:ir.model.fields,field_description:afe_odoo_export_zip.field_afe_invoice_export_zip_display_name
+#: model:ir.model.fields,field_description:afe_odoo_export_zip.field_wizard_export_zip_from_einvoice_display_name
+msgid "Display Name"
+msgstr "Nome Visualizzato"
+
+#. module: afe_odoo_export_zip
+#: model:ir.model.fields,field_description:afe_odoo_export_zip.field_account_invoice_einvoice_export_state
+#: model:ir.model.fields,field_description:afe_odoo_export_zip.field_afe_einvoice_in_einvoice_export_state
+msgid "E-Invoice Export State"
+msgstr "Stato Esportazione Fattura Elettronica"
+
+#. module: afe_odoo_export_zip
+#: code:addons/afe_odoo_export_zip/wizard/export_zip.py:31
+#, python-format
+msgid "Error on invoice %s. \n"
+"Export only invoices not exported, yet!"
+msgstr "Errore per la fattura %s. \n"
+"Esportare solo documenti che non siano già stati esportati!"
+
+#. module: afe_odoo_export_zip
+#: model:ir.ui.view,arch_db:afe_odoo_export_zip.wizard_export_zip_from_einvoice_form_view
+msgid "Export"
+msgstr "Esportazione"
+
+#. module: afe_odoo_export_zip
+#: model:ir.actions.act_window,name:afe_odoo_export_zip.action_export_zip_account_invoice
+#: model:ir.actions.act_window,name:afe_odoo_export_zip.action_export_zip_afe_einvoice_in
+#: model:ir.ui.view,arch_db:afe_odoo_export_zip.wizard_export_zip_from_einvoice_form_view
+msgid "Export XML as ZIP"
+msgstr "Esporta XML come ZIP"
+
+#. module: afe_odoo_export_zip
+#: model:ir.actions.act_window,name:afe_odoo_export_zip.afe_invoice_export_zip_action
+#: model:ir.model.fields,field_description:afe_odoo_export_zip.field_account_invoice_afe_export_zip_id
+#: model:ir.model.fields,field_description:afe_odoo_export_zip.field_afe_einvoice_in_afe_export_zip_id
+#: model:ir.ui.menu,name:afe_odoo_export_zip.afe_invoice_export_zip_menu
+#: model:ir.ui.view,arch_db:afe_odoo_export_zip.afe_invoice_export_zip_form
+#: model:ir.ui.view,arch_db:afe_odoo_export_zip.afe_invoice_export_zip_search
+#: model:ir.ui.view,arch_db:afe_odoo_export_zip.afe_invoice_export_zip_tree
+msgid "Export ZIP"
+msgstr "Esporta ZIP"
+
+#. module: afe_odoo_export_zip
+#: selection:account.invoice,einvoice_export_state:0
+#: selection:afe.einvoice.in,einvoice_export_state:0
+#: model:ir.ui.view,arch_db:afe_odoo_export_zip.export_zip_afe_einvoice_in_search
+#: model:ir.ui.view,arch_db:afe_odoo_export_zip.export_zip_afe_einvoice_state_tree_search
+msgid "Exported"
+msgstr "Esportato"
+
+#. module: afe_odoo_export_zip
+#: model:ir.model,name:afe_odoo_export_zip.model_wizard_export_zip_from_einvoice
+msgid "Generate ZIP with XML from einvoices"
+msgstr "Genera ZIP contenente i file XML dalle fatture"
+
+#. module: afe_odoo_export_zip
+#: model:ir.model.fields,field_description:afe_odoo_export_zip.field_afe_invoice_export_zip_id
+#: model:ir.model.fields,field_description:afe_odoo_export_zip.field_wizard_export_zip_from_einvoice_id
+msgid "ID"
+msgstr "ID"
+
+#. module: afe_odoo_export_zip
+#: model:ir.model,name:afe_odoo_export_zip.model_account_invoice
+msgid "Invoice"
+msgstr "Fattura"
+
+#. module: afe_odoo_export_zip
+#: model:ir.model.fields,field_description:afe_odoo_export_zip.field_afe_invoice_export_zip_invoices_type
+msgid "Invoices Type"
+msgstr "Tipo Fatture"
+
+#. module: afe_odoo_export_zip
+#: model:ir.model.fields,field_description:afe_odoo_export_zip.field_afe_invoice_export_zip___last_update
+#: model:ir.model.fields,field_description:afe_odoo_export_zip.field_wizard_export_zip_from_einvoice___last_update
+msgid "Last Modified on"
+msgstr "Ultima modifica il"
+
+#. module: afe_odoo_export_zip
+#: model:ir.model.fields,field_description:afe_odoo_export_zip.field_afe_invoice_export_zip_write_uid
+#: model:ir.model.fields,field_description:afe_odoo_export_zip.field_wizard_export_zip_from_einvoice_write_uid
+msgid "Last Updated by"
+msgstr "Ultima modifica di"
+
+#. module: afe_odoo_export_zip
+#: model:ir.model.fields,field_description:afe_odoo_export_zip.field_afe_invoice_export_zip_write_date
+#: model:ir.model.fields,field_description:afe_odoo_export_zip.field_wizard_export_zip_from_einvoice_write_date
+msgid "Last Updated on"
+msgstr "Ultima modifica il"
+
+#. module: afe_odoo_export_zip
+#: model:ir.model.fields,field_description:afe_odoo_export_zip.field_afe_invoice_export_zip_mail_sending_ids
+#: model:ir.ui.view,arch_db:afe_odoo_export_zip.afe_invoice_export_zip_form
+msgid "Mail Sendings"
+msgstr "Invii Email"
+
+#. module: afe_odoo_export_zip
+#: selection:account.invoice,einvoice_export_state:0
+#: selection:afe.einvoice.in,einvoice_export_state:0
+#: model:ir.ui.view,arch_db:afe_odoo_export_zip.export_zip_afe_einvoice_in_search
+#: model:ir.ui.view,arch_db:afe_odoo_export_zip.export_zip_afe_einvoice_state_tree_search
+msgid "Not Exported"
+msgstr "Non Esportato"
+
+#. module: afe_odoo_export_zip
+#: model:ir.ui.view,arch_db:afe_odoo_export_zip.afe_invoice_export_zip_form
+msgid "Resend"
+msgstr "Invia Nuovamente"
+
+#. module: afe_odoo_export_zip
+#: selection:afe.invoice.export.zip,state:0
+msgid "Sent"
+msgstr "Inviato"
+
+#. module: afe_odoo_export_zip
+#: code:addons/afe_odoo_export_zip/models/account.py:118
+#, python-format
+msgid "Set an email for sending ZIP in company configuration"
+msgstr "Impostare un'email per l'invio del file ZIP nelle configurazioni dell'azienda"
+
+#. module: afe_odoo_export_zip
+#: model:ir.model.fields,field_description:afe_odoo_export_zip.field_afe_invoice_export_zip_state
+msgid "State"
+msgstr "Stato"
+
+#. module: afe_odoo_export_zip
+#: selection:afe.invoice.export.zip,invoices_type:0
+#: model:ir.model.fields,field_description:afe_odoo_export_zip.field_afe_invoice_export_zip_in_invoices_ids
+#: model:ir.ui.view,arch_db:afe_odoo_export_zip.afe_invoice_export_zip_form
+msgid "Suppliers Invoices"
+msgstr "Fatture Fornitori"
+
+#. module: afe_odoo_export_zip
+#: selection:account.invoice,einvoice_export_state:0
+#: selection:afe.einvoice.in,einvoice_export_state:0
+#: model:ir.ui.view,arch_db:afe_odoo_export_zip.export_zip_afe_einvoice_in_search
+#: model:ir.ui.view,arch_db:afe_odoo_export_zip.export_zip_afe_einvoice_state_tree_search
+msgid "To Export"
+msgstr "Da Esportare"
+
+#. module: afe_odoo_export_zip
+#: selection:afe.invoice.export.zip,state:0
+msgid "To Resend"
+msgstr "Da Rinviare"
+
+#. module: afe_odoo_export_zip
+#: selection:afe.invoice.export.zip,state:0
+msgid "To Send"
+msgstr "Da Inviare"
+
+#. module: afe_odoo_export_zip
+#: code:addons/afe_odoo_export_zip/models/account.py:126
+#, python-format
+msgid "ZIP with XML from {company}"
+msgstr "ZIP contenente gli XML da {company}"
+
+#. module: afe_odoo_export_zip
+#: model:ir.model.fields,field_description:afe_odoo_export_zip.field_afe_invoice_export_zip_zip_file_name
+msgid "Zip file name"
+msgstr "Nome File Zip"
+
+#. module: afe_odoo_export_zip
+#: model:ir.model,name:afe_odoo_export_zip.model_afe_einvoice_in
+msgid "afe.einvoice.in"
+msgstr "afe.einvoice.in"
+
+#. module: afe_odoo_export_zip
+#: model:ir.model,name:afe_odoo_export_zip.model_afe_invoice_export_zip
+msgid "afe.invoice.export.zip"
+msgstr "afe.invoice.export.zip"
