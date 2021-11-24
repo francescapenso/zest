@@ -47,3 +47,8 @@
 	path = DigitalAutomations/INTEGRATIONS_OMEC_ZEST
 	url = git@github.com:DigitalAutomations/INTEGRATIONS_OMEC_ZEST.git
 	branch = main
+
+[submodule "OCA/stock-logistics-barcode"]
+	path = OCA/stock-logistics-barcode
+	url = git@github.com:OCA/stock-logistics-barcode.git
+	branch = 14.0
