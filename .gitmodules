@@ -13,11 +13,6 @@
 	url = git@github.com:OCA/account-financial-reporting.git
 	branch = 14.0
 
-[submodule "OCA/server-ux"]
-	path = OCA/server-ux
-	url = git@github.com:OCA/server-ux.git
-	branch = 14.0
-
 [submodule "OCA/partner-contact"]
 	path = OCA/partner-contact
 	url = git@github.com:OCA/partner-contact.git
