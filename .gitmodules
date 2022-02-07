@@ -43,7 +43,3 @@
 	url = git@github.com:OCA/account-invoicing.git
 	branch = 14.0
 
-[submodule "DigitalAutomations/INTEGRATIONS_OMEC_ZEST"]
-	path = DigitalAutomations/INTEGRATIONS_OMEC_ZEST
-	url = git@github.com:DigitalAutomations/INTEGRATIONS_OMEC_ZEST.git
-	branch = main
